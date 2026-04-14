@@ -375,13 +375,100 @@ ul {
   border-bottom: none !important;
   font-weight: 800 !important;
   margin-left: 20px;
+  border: none;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: background-color 0.22s ease;
 }
 
 .nav-cta:hover {
   background: var(--gold-dark) !important;
   color: var(--navy) !important;
-  border-bottom: none !important;
 }
+
+/* ── Nav CTA Dropdown ─────────────────────────────────────── */
+.nav-cta-wrap {
+  position: relative;
+}
+
+.nav-cta-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0, 45, 114, 0.16);
+  border: 1px solid var(--border);
+  min-width: 210px;
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 1002;
+  pointer-events: none;
+}
+
+/* Small arrow pointer at top */
+.nav-cta-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 22px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  transform: rotate(45deg);
+  border-radius: 2px 0 0 0;
+}
+
+.nav-cta-wrap:hover .nav-cta-dropdown,
+.nav-cta-wrap:focus-within .nav-cta-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-drop-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 14px;
+  border-radius: 7px;
+  text-decoration: none !important;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 0.15s ease, color 0.15s ease;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.nav-drop-item:hover {
+  background: var(--light-blue);
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.nav-drop-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 6px;
+}
+
+.nav-drop-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 
 .nav-mobile-toggle {
   display: none;
@@ -651,7 +738,7 @@ section.alt {
 
 .section-label {
   display: block;
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
