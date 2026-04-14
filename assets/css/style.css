@@ -651,11 +651,11 @@ section.alt {
 
 .section-label {
   display: block;
-  font-size: 13px;
+  font-size: 23px;
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-dark);
   margin-bottom: 10px;
   padding-top: 64px;
 }
