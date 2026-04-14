@@ -429,6 +429,17 @@ ul {
   border-radius: 2px 0 0 0;
 }
 
+/* Invisible bridge to prevent hover loss when moving cursor from button to dropdown */
+.nav-cta-dropdown::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: transparent;
+}
+
 .nav-cta-wrap:hover .nav-cta-dropdown,
 .nav-cta-wrap:focus-within .nav-cta-dropdown {
   opacity: 1;
