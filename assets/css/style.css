@@ -1077,6 +1077,9 @@ section.alt {
 
 .card-body {
   padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card-body h3 {
