@@ -713,6 +713,10 @@ ul {
   margin-bottom: 0;
 }
 
+.page-hero + section:not([style]) {
+  margin-top: 56px;
+}
+
 .breadcrumb + .page-hero + section {
   margin-top: 56px;
 }
@@ -1944,6 +1948,10 @@ form textarea {
     background: var(--navy);
     min-height: auto;
     /* Make background solid on mobile so text is legible under image */
+  }
+
+  .page-hero + section:not([style]) {
+    margin-top: 40px;
   }
 
   .breadcrumb + .page-hero + section {
