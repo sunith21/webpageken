@@ -240,6 +240,7 @@ ul {
   transform: translateX(4px);
 }
 
+/* Site-wide header shell used by index.html and all inner pages. */
 .site-header {
   position: sticky;
   top: 0;
@@ -254,6 +255,7 @@ ul {
   box-shadow: 0 4px 20px rgba(0, 45, 114, 0.14);
 }
 
+/* Optional top contact strip for pages that include .header-topbar in the HTML. */
 .header-topbar {
   background: var(--white);
   padding: 9px 0;
@@ -289,6 +291,7 @@ ul {
   flex-shrink: 0;
 }
 
+/* Main navigation bar shared across the site header markup in each HTML page. */
 .header-main {
   background: #fff;
   border-bottom: 2px solid var(--gold);
@@ -335,6 +338,7 @@ ul {
   color: var(--gold);
 }
 
+/* Primary desktop navigation links and CTA dropdown used in all page headers. */
 .primary-nav ul {
   display: flex;
   align-items: center;
@@ -394,6 +398,7 @@ ul {
 }
 
 /* ── Nav CTA Dropdown ─────────────────────────────────────── */
+/* Book Consultation button dropdown in the shared header navigation. */
 .nav-cta-wrap {
   position: relative;
 }
@@ -499,6 +504,7 @@ ul {
   border-radius: 2px;
 }
 
+/* Breadcrumb bar used on pages that render breadcrumb navigation above the hero. */
 .breadcrumb {
   background: var(--light-blue);
   padding: 10px 0;
@@ -522,6 +528,7 @@ ul {
   color: var(--mid-gray);
 }
 
+/* Home page hero section: index.html uses .hero-section, .hero-left, .hero-right, and .hero-buttons. */
 .hero-section {
   background: var(--navy);
   height: 540px;
@@ -637,6 +644,7 @@ ul {
   z-index: 1;
 }
 
+/* Inner-page hero section used by about.html, services.html, mortgages.html, protection.html, contact.html, careers.html, privacy.html, and the product/service detail pages. */
 .page-hero {
   position: relative;
   background: var(--navy);
@@ -727,6 +735,7 @@ ul {
   display: initial;
 }
 
+/* Adds the first content spacing directly after an inner-page hero block. */
 .page-hero + section:not([style]) {
   margin-top: 56px;
 }
@@ -1059,6 +1068,7 @@ section.alt {
   }
 }
 
+/* Generic card grids used on overview pages like services.html, mortgages.html, and protection.html. */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1071,6 +1081,7 @@ section.alt {
   gap: 24px;
 }
 
+/* Reusable content card styling for service, mortgage, and protection listing cards. */
 .card {
   background: #fff;
   border: 1px solid var(--border);
@@ -1160,6 +1171,7 @@ section.alt {
   border-top: 4px solid var(--navy);
 }
 
+/* Protection-specific three-column card layout used on protection-focused pages. */
 .prot-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1217,6 +1229,7 @@ section.alt {
   border-top: 4px solid #d4920c;
 }
 
+/* Step cards used for process or journey sections on pages like how-we-work.html. */
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1276,6 +1289,7 @@ section.alt {
   font-weight: 700;
 }
 
+/* Numbered horizontal process strip used where the HTML renders .process-step blocks. */
 .process-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -1320,6 +1334,7 @@ section.alt {
   line-height: 1.6;
 }
 
+/* Review scroller used on pages that include testimonial/review snippets. */
 .reviews-bar {
   background: #fff;
   border-top: 1px solid var(--border);
@@ -1392,6 +1407,7 @@ section.alt {
   color: #fff;
 }
 
+/* Full-width closing CTA section used above the footer on multiple service and protection pages. */
 .cta-band {
   background: var(--navy);
   padding: 64px 0;
@@ -1431,6 +1447,7 @@ section.alt {
   flex-wrap: wrap;
 }
 
+/* Disclaimer list inside CTA bands and other important notice sections near the footer. */
 .cta-disclaimer {
   margin-top: 36px;
   padding-top: 24px;
@@ -1468,10 +1485,12 @@ section.alt {
   padding-left: 1.2em;
 }
 
+/* Shared footer wrapper present on every HTML page. */
 .site-footer {
   background: var(--navy);
 }
 
+/* Upper footer navigation columns: mortgages, protection, company, and contact. */
 .footer-nav-area {
   padding: 36px 0;
   background: var(--navy);
@@ -1558,6 +1577,7 @@ section.alt {
   transform: scale(1.2);
 }
 
+/* Lower footer legal/regulatory section shared across the site. */
 .footer-legal {
   display: flex;
   justify-content: center;
@@ -1673,6 +1693,7 @@ section.alt {
   color: rgba(255, 255, 255, 0.4);
 }
 
+/* Generic two-column page content layout used by about, contact, and many detail pages. */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1684,6 +1705,7 @@ section.alt {
   align-items: stretch;
 }
 
+/* Reusable white content panels used for info blocks, contact details, and application cards. */
 .info-card {
   background: #fff;
   border: 1px solid var(--border);
@@ -1772,6 +1794,7 @@ section.alt {
   margin-bottom: 6px;
 }
 
+/* Shared form spacing for contact or calculator-style form fields rendered in HTML forms. */
 form>div {
   margin-bottom: 16px;
 }
@@ -1831,6 +1854,7 @@ form textarea {
   line-height: 1.6;
 }
 
+/* Careers page job card layout used by careers.html. */
 .career-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1877,6 +1901,7 @@ form textarea {
   background: var(--gold);
 }
 
+/* Careers page spacing overrides added only when careers.html sets body.career-page. */
 .career-page section .container {
   padding-top: 40px;
 }
@@ -1914,6 +1939,7 @@ form textarea {
   margin-bottom: 12px;
 }
 
+/* Scroll-reveal utility classes toggled by site.js on elements marked with .reveal. */
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -1961,6 +1987,7 @@ form textarea {
   }
 }
 
+/* Shared responsive adjustments for mobile/tablet header, hero, layout, and button stacking. */
 @media (max-width: 900px) {
   .hero-section {
     grid-template-columns: 1fr;
@@ -2192,6 +2219,7 @@ form textarea {
 }
 
 /* ── SPLIT HERO SECTION (Reference Match) ── */
+/* Alternative split hero layout used on specialized landing pages that use .split-hero-* markup. */
 .split-hero-sec {
   background: #f4f5f0;
   position: relative;
@@ -2307,6 +2335,7 @@ form textarea {
   pointer-events: none;
 }
 
+/* Floating enquiry form card tied to the split hero landing-page layout. */
 .floating-form-card {
   position: absolute;
   top: 50%;
@@ -2456,6 +2485,7 @@ form textarea {
 }
 
 /* ── Mortgage Calculator ───────────────────────────────────── */
+/* Mortgage calculator section used where HTML renders the .calc-section and related calculator fields. */
 .calc-section {
   background: #f5f7fa;
   padding: 72px 0;
@@ -2690,6 +2720,7 @@ form textarea {
 }
 
 /* ── Preloader ─────────────────────────────────────── */
+/* Initial page loader overlay controlled by JS while the page is starting up. */
 #loader {
   position: fixed;
   inset: 0;
