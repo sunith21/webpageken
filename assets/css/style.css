@@ -26,6 +26,7 @@
 
 html {
   /* Prevent global scroll lag while keeping anchor smooth scroll */
+  overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -64,6 +65,7 @@ body {
   line-height: 1.65;
   color: var(--text);
   background: #ffffff;
+  overflow-x: hidden;
 }
 
 a {
@@ -545,7 +547,7 @@ ul {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  min-height: 360px;
+  min-height: 400px;
   position: relative;
   z-index: 2;
 }
@@ -570,14 +572,18 @@ ul {
   font-weight: 700;
   color: #fff;
   line-height: 1.2;
+  max-width: 100%;
+  min-height: calc(1.2em * 2);
   margin-bottom: 18px;
+  text-wrap: balance;
 }
 
 .hero-sub {
   font-size: 17px;
   color: rgba(255, 255, 255, 0.85);
-  line-height: 1;
-  max-width: 34rem;
+  line-height: 1.65;
+  max-width: 100%;
+  min-height: calc(1.65em * 3);
   margin-bottom: 0;
 }
 
@@ -679,7 +685,7 @@ ul {
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
-  min-height: 360px;
+  min-height: 400px;
 }
 
 .page-hero-text .kicker {
@@ -702,15 +708,23 @@ ul {
   font-weight: 700;
   color: #fff;
   line-height: 1.2;
+  max-width: 100%;
+  min-height: calc(1.2em * 2);
   margin-bottom: 18px;
+  text-wrap: balance;
 }
 
 .page-hero-text p {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.82);
   line-height: 1.7;
-  max-width: 34rem;
+  max-width: 100%;
+  min-height: calc(1.7em * 3);
   margin-bottom: 0;
+}
+
+.hero-break {
+  display: initial;
 }
 
 .page-hero + section:not([style]) {
@@ -1568,6 +1582,10 @@ section.alt {
   width: 100%;
 }
 
+.footer-legal .container > div:last-child {
+  padding-left: 32px;
+}
+
 .footer-legal p {
   font-size: 12.5px;
   color: rgba(255, 255, 255, 0.62);
@@ -1859,6 +1877,43 @@ form textarea {
   background: var(--gold);
 }
 
+.career-page section .container {
+  padding-top: 40px;
+}
+
+.career-page .section-heading {
+  margin-bottom: 12px;
+}
+
+.career-page .section-body {
+  margin-bottom: 18px;
+}
+
+.career-page .career-grid {
+  gap: 18px;
+}
+
+.career-page .career-card {
+  padding: 22px;
+}
+
+.career-page .info-card {
+  padding: 24px;
+}
+
+.career-page section.alt .container {
+  padding-bottom: 16px;
+}
+
+.career-page .cta-disclaimer {
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+.career-page .career-footer-gap {
+  margin-bottom: 12px;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -1961,12 +2016,28 @@ form textarea {
   .hero-sub,
   .page-hero-text p {
     max-width: 100%;
+    min-height: auto;
+  }
+
+  .hero-heading,
+  .page-hero-text h1 {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .hero-left,
+  .page-hero-text {
+    min-height: auto;
   }
 
   .hero-buttons,
   .page-hero-text .cta-row {
     margin-top: 28px;
     padding-top: 0;
+  }
+
+  .hero-break {
+    display: none;
   }
 
   .feature-strip {
