@@ -576,7 +576,7 @@ ul {
 .hero-sub {
   font-size: 17px;
   color: rgba(255, 255, 255, 0.85);
-  line-height: 1.7;
+  line-height: 1;
   max-width: 34rem;
   margin-bottom: 0;
 }
@@ -1483,6 +1483,18 @@ section.alt {
   gap: 6px;
 }
 
+.footer-company-logo {
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.footer-company-logo img {
+  width: 76px;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
 .footer-col ul li a {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.72);
@@ -1529,20 +1541,27 @@ section.alt {
 }
 
 .footer-legal {
+  display: flex;
+  justify-content: center;
   padding: 24px 0;
   background: var(--blue-dark);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-legal .container {
+  width: min(var(--max), 92vw);
+  max-width: var(--max);
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
   align-items: start;
+  padding: 0 4%;
 }
 
 .footer-legal .container>* {
   min-width: 0;
+  width: 100%;
 }
 
 .footer-legal p {
@@ -1550,6 +1569,12 @@ section.alt {
   color: rgba(255, 255, 255, 0.62);
   line-height: 1.65;
   margin-bottom: 5px;
+}
+
+.footer-legal .container > div:nth-child(2) p:not(.footer-legal-heading) {
+  font-size: 12.5px;
+  line-height: 1.65;
+  max-width: 52ch;
 }
 
 .footer-legal p a {
