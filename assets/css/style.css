@@ -1939,6 +1939,15 @@ form textarea {
   margin-bottom: 12px;
 }
 
+/* Mortgages page hero width override so the intro paragraph can hold a clean 3-line layout. */
+.mortgages-page .page-hero-text {
+  max-width: 860px;
+}
+
+.mortgages-page .page-hero-text p {
+  font-size: 15px;
+}
+
 /* Scroll-reveal utility classes toggled by site.js on elements marked with .reveal. */
 .reveal {
   opacity: 0;
