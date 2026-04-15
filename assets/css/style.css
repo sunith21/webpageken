@@ -550,6 +550,10 @@ ul {
   z-index: 2;
 }
 
+.home-hero-left {
+  max-width: 720px;
+}
+
 .hero-eyebrow {
   display: inline-block;
   color: var(--gold);
@@ -667,7 +671,7 @@ ul {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 620px;
+  max-width: 700px;
   padding: 60px 4% 60px max(4%, calc((100vw - var(--max)) / 2 + 4%));
   background: transparent;
   display: flex;
